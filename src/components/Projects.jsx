@@ -1,9 +1,9 @@
-import '../hooks/fetchProjects'
+import { useFetchProjects } from '../hooks/fetchProjects';
 
 const Projects = () => {
-  return (
-    <div>Projects</div>
-  )
-}
+  const { isLoading, projects } = useFetchProjects();
 
-export default Projects
+  return <div>Projects</div>;
+};
+
+export default Projects;
